@@ -10,8 +10,9 @@ class BestBooks extends React.Component {
       books: [],
       noBooks: false
     };
-  }
 
+    this.getBooks = this.getBooks.bind(this);
+  }
 
   componentDidMount() {
     this.getBooks();
@@ -20,10 +21,11 @@ class BestBooks extends React.Component {
   async getBooks() {
     try {
       const response = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
-      console.log(this.state.books)
+      // console.log(this.state.books)
+      console.log (response.data)
       this.setState({ books: response.data });
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error('Error fetching books:', error);
     }
   }
 
