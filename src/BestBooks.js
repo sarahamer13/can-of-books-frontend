@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+// eslint-disable-next-line no-unused-vars
 import DisplayBooks from './DisplayBooks.js';
 import axios from 'axios';
 
@@ -17,11 +18,11 @@ class BestBooks extends React.Component {
     this.getBooks();
   }
 
-  getBooks = async () => {
+  getBooks = async () =>  {
     try {
       console.log(process.env.REACT_APP_SERVER)
       const response = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
-      console.log(response.data)
+      console.log (response.data)
       this.setState({ books: response.data });
     } catch (error) {
       console.error('Error fetching books:', error);
@@ -34,7 +35,7 @@ class BestBooks extends React.Component {
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <Carousel style={{ height: '400px' }} >
+          <Carousel style={{height:'400px'}} >
             {this.state.books.map((book) => (
               <Carousel.Item key={book._id}>
                 <div>
