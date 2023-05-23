@@ -33,6 +33,7 @@ class BestBooks extends React.Component {
     return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
+
         {this.state.books.length ? (
           <Carousel style={{height:'400px'}} >
             {this.state.books.map((book) => (
@@ -48,6 +49,7 @@ class BestBooks extends React.Component {
         ) : (
           <h3>Sorry, no books found</h3>
         )}
+
       </>
     );
   }
