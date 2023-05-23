@@ -32,6 +32,7 @@ class BestBooks extends React.Component {
 
         {this.state.books.length > 0 && this.state.books.map((books, idx) => (
           <h1>Book Carousel coming soon</h1>
+          
         ))}
       </>
     )
