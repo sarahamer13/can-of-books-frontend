@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 // eslint-disable-next-line no-unused-vars
 import DisplayBooks from './DisplayBooks.js';
 import axios from 'axios';
+import AddForm from './AddForm.js';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -29,12 +30,27 @@ class BestBooks extends React.Component {
     }
   }
 
+  postBooks = async (newBook) => {
+    try{
+      const url = `${process.env.REACT_APP_SERVER}/books`
+      const response = await axios.post(url, newBook);
+      console.log(response.data);
+      this.setState({books: [...this.state.books, response.data]})
+    }
+    catch(err){
+      console.error(err);
+    }
+  }
+
   render() {
     return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
+          <div>
+          <AddForm postBooks={this.postBooks} />
+          <br/>
           <Carousel style={{height:'400px'}} >
             {this.state.books.map((book) => (
               <Carousel.Item key={book._id}>
@@ -46,6 +62,7 @@ class BestBooks extends React.Component {
               </Carousel.Item>
             ))}
           </Carousel>
+          </div>
         ) : (
           <h3>Sorry, no books found</h3>
         )}
