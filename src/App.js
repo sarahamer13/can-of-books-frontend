@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import About from './About';
+import './App.css'
 
 class App extends React.Component {
   render() {
