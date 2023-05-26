@@ -9,14 +9,14 @@ body {
 }
 
 .nav-link {
-    padding-right: 20px;
+    padding-right: 25px;
     font-family: 'Playfair Display', serif;
     
    
 }
 
 .navBrand {
-    padding-right: 20px;
+    margin-left: 20px;
     font-family: 'Playfair Display', serif;
     color: rgb(245, 235, 235);
 }
@@ -31,6 +31,7 @@ h2 {
 button {
     margin-left: 45%;
     margin-right: 40%;
+    margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
     background-color: rgb(245, 235, 235);
     border-radius: 10px;
@@ -44,4 +45,17 @@ p  {
     font-family: 'Playfair Display', serif;
     padding-bottom: 100px;
     color:rgb(245, 235, 235);
+ }
+
+ .reactButton {
+    font-family: 'Playfair Display', serif;
+ }
+
+ .footer {
+    color: rgb(245, 235, 235);
+ }
+
+ .footerBar {
+    background-color: #35332F;
+    font-family: 'Playfair Display', serif;
  }
