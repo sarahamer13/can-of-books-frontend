@@ -41,6 +41,11 @@ h3 {
     color:rgb(245, 235, 235);
 }
 
+.modal {
+    color: #35332F;
+    font-family: 'Playfair Display', serif;
+}
+
 p  {
     font-family: 'Playfair Display', serif;
     padding-bottom: 100px;
@@ -48,6 +53,22 @@ p  {
  }
 
  .reactButton {
+    font-family: 'Playfair Display', serif;
+ }
+
+ .submit-button {
+    font-family: 'Playfair Display', serif;
+ }
+
+ .update-title {
+    font-family: 'Playfair Display', serif;
+ }
+
+ .update-description {
+    font-family: 'Playfair Display', serif;
+ }
+
+ .update-availability {
     font-family: 'Playfair Display', serif;
  }
 

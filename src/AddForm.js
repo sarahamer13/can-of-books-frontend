@@ -17,6 +17,7 @@ class AddForm extends React.Component {
     render() {
         return (
             <>
+                <div className="modal">
                 <Modal show={this.props.show} onHide={this.props.hideModal}>
                     <Modal.Header closeButton>
                         <Modal.Title>Add a book</Modal.Title>
@@ -37,13 +38,15 @@ class AddForm extends React.Component {
                             </Form.Group>
 
                             <Form.Group controlId="status">
-                                <Form.Check type="checkbox" label="Do you have this book?" />
+                                <Form.Check type="checkbox" label="Is book Available?" />
                             </Form.Group>
 
-                            <Button type="submit">Add Book</Button>
+                            <Button 
+                            variant="dark" type="submit">Add Book</Button>
                         </Form>
                     </Modal.Body>
                 </Modal>
+                </div>
             </>
         );
     }
