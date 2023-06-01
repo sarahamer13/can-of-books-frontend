@@ -24,7 +24,7 @@ class UpdateBook extends Component {
     return (
       <Container>
         <Form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="title">
+          <FormGroup className="update-title" controlId="title">
             <FormLabel> Title:</FormLabel>
             <FormControl
               type="text"
@@ -32,7 +32,7 @@ class UpdateBook extends Component {
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <FormGroup controlId="description">
+          <FormGroup className="update-description" controlId="description">
             <FormLabel> Description:</FormLabel>
             <FormControl
               type="text"
@@ -40,15 +40,15 @@ class UpdateBook extends Component {
               onChange={this.handleInputChange}
             />
           </FormGroup>
-          <FormGroup controlId="status">
-            <FormLabel> Have you read this book?</FormLabel>
+          <FormGroup className="update-availability" controlId="status">
+            <FormLabel>Available?</FormLabel>
             <FormControl
               type="text"
               placeholder="Yes...No...In Progress"
               onChange={this.handleInputChange}
             />
-            <Button
-              variant="primary"
+            <Button className="submit-button"
+              variant="dark"
               type="submit"
               onClick={this.props.hide}
             >
