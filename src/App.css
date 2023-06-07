@@ -52,6 +52,11 @@ p  {
     color:rgb(245, 235, 235);
  }
 
+ .login {
+    font-family: 'Playfair Display', serif;
+    border-radius: 10px;
+ }
+
  .reactButton {
     font-family: 'Playfair Display', serif;
  }
